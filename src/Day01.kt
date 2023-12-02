@@ -1,7 +1,3 @@
-package Day01
-
-import readInput
-
 val words = listOf("one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
 val reverseWords = words.map { it.reversed() }
 val digits = List(10) { "$it" }
@@ -18,7 +14,7 @@ fun part1() {
 }
 
 fun part2() {
-    val lines = readInput("Day01/input")
+    val lines = readInput("input")
     println(lines.sumOf { line: String ->
         getNumber(line, words) * 10 + getNumber(line.reversed(), reverseWords)
     })
