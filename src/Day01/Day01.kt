@@ -1,9 +1,15 @@
+package Day01
+
+import readInput
+
 val words = listOf("one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
 val reverseWords = words.map { it.reversed() }
 val digits = List(10) { "$it" }
 fun main() {
-    //part1()
+    part1()
     part2()
+
+
 }
 
 fun part1() {
@@ -19,6 +25,7 @@ fun part2() {
         getNumber(line, words) * 10 + getNumber(line.reversed(), reverseWords)
     })
 }
+
 
 private fun getNumber(line: String, words: List<String>): Int {
     val (wordIndex, word) = line.findAnyOf(words) ?: (Int.MAX_VALUE to "not found")
